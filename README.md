@@ -1,9 +1,8 @@
 # Keelwright Studio
 
-Documents, brand assets and the website for Keelwright Studio (keelwright.dev).
+The website for Keelwright Studio (keelwright.dev).
 
 ```
-brand/          the mark (SVG; with-course and small variants), explored concepts, identity.md (colour, type, voice, usage)
 site/           keelwright.dev — static HTML/CSS, no build step
   index.html              the studio one-pager
   swatchbuckler/          product page for Swatchbuckler
@@ -15,9 +14,9 @@ site/           keelwright.dev — static HTML/CSS, no build step
 
 ## Deploying the site
 
-Upload the contents of `site/` to any static host (Cloudflare Pages, Netlify, GitHub Pages, a plain web server).
+The site is hosted on GitHub Pages. `.github/workflows/pages.yml` publishes `site/` on every push to `main`.
 Internal links are root-relative (`/swatchbuckler/`, `/privacy.html`), so it must be served from the domain root.
-There is nothing to build; to preview locally run `python3 -m http.server 8000` inside `site/` and open http://localhost:8000.
+It can also be served from any static host. There is nothing to build; to preview locally run `python3 -m http.server 8000` inside `site/` and open http://localhost:8000.
 
 ## Updating the Swatchbuckler screenshots
 

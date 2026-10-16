@@ -2,7 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Keelwright Studio (keelwright.dev): brand assets (`brand/`) and a hand-written static site (`site/`). There is no build, test or lint tooling.
+Keelwright Studio (keelwright.dev): a hand-written static site (`site/`). There is no build, test or lint tooling.
+
+`brand/`, `.sync/` and `Claude outputs/` exist only on the owner's machine: they are gitignored and not in the repo. Never `git add` them. If `brand/` is absent (e.g. a fresh clone), skip the mark-regeneration command and the `brand/identity.md` checks below.
 
 ## Commands
 
