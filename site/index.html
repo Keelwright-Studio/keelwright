@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Keelwright Studio</title>
 <meta name="description" content="Keelwright Studio makes small, well-made tools for people who build for the web. First up: Swatchbuckler, a browser extension that captures any site's design system.">
+<meta name="theme-color" content="#0C1328">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="assets/site.css">
@@ -14,88 +15,63 @@
 <meta property="og:url" content="https://keelwright.dev/">
 </head>
 <body>
+<div class="page">
+<div class="chart" aria-hidden="true"></div>
+
 <header class="site-header">
-  <div class="container">
-    <a class="brand" href="/" aria-label="Keelwright Studio home">
-      <img class="mark mark-light" src="assets/mark.svg" alt="" width="32" height="32">
-      <img class="mark mark-dark" src="assets/mark-dark.svg" alt="" width="32" height="32">
-      Keelwright
-    </a>
-    <nav class="nav" aria-label="Site">
-      <a href="/swatchbuckler/">Swatchbuckler</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="mailto:hello@keelwright.dev">Contact</a>
-    </nav>
-  </div>
+  <a class="brand label" href="/" aria-label="Keelwright Studio home">Keelwright Studio — makers of small tools — est. 2026</a>
+  <nav class="label" aria-label="Site">
+    <a href="#register">Register</a>
+    <a href="/swatchbuckler/">Swatchbuckler</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="#colophon">Contact</a>
+  </nav>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="container">
-      <picture><source srcset="assets/mark-large-dark.svg" media="(prefers-color-scheme: dark)"><img class="hero-mark" src="assets/mark-large.svg" alt="" width="112" height="112" style="border-radius: 0;"></picture>
-      <h1>The keel is the part that keeps a hull true.</h1>
-      <p class="lede">Keelwright Studio makes small, well-made tools for people who build for the web. Each one does one job properly, runs on your machine, and stays out of your way.</p>
+  <div class="wordmark" aria-hidden="true">
+    <div class="word">Keelwright</div>
+    <div class="waterline"></div>
+    <div class="reflection">Keelwright</div>
+  </div>
+
+  <div class="hero">
+    <h1 class="standfirst">The keel is the part that keeps a hull true.</h1>
+    <p>Keelwright Studio makes small, well-made tools for people who build for the web. Each one does one job properly, runs on your machine, and stays out of your way.</p>
+  </div>
+
+  <section id="register" aria-labelledby="register-title">
+    <div class="register-head">
+      <span class="label" id="register-title">Register of tools</span>
+      <span class="label faint">Hull no. / Name / Kind / Waters / State</span>
+    </div>
+    <div class="row">
+      <span class="label no">001</span>
+      <span class="name"><a href="/swatchbuckler/">Swatchbuckler</a></span>
+      <span class="kind">Browser extension that captures any site's design system</span>
+      <span class="waters">Firefox, Chrome, Safari</span>
+      <span class="label state">On the slip</span>
+    </div>
+    <div class="row quiet">
+      <span class="label no">002</span>
+      <span class="name">Not yet named</span>
+      <span class="kind">—</span>
+      <span class="waters">—</span>
+      <span class="label state">Keel not laid</span>
     </div>
   </section>
 
-  <section class="section" id="tools">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Tools · first up</span>
-      </div>
-      <article class="product">
-        <div class="fan" aria-hidden="true"><span style="background:#E4572E"></span><span style="background:#F3A712"></span><span style="background:#3BB273"></span><span style="background:#2D6AE3"></span><span style="background:#7B4FD4"></span></div>
-        <div class="text">
-          <h2><img src="swatchbuckler/icon-128.png" alt="" width="48" height="48">Swatchbuckler</h2>
-          <p class="muted">Plunder any site's design system. A browser extension that captures the colors, type, spacing and components of the site you're browsing and hauls them in as design tokens, a style guide, and a package you can hand straight to Claude or your own code.</p>
-          <div class="chips"><span class="chip">Firefox</span><span class="chip">Chrome</span><span class="chip">Safari</span><span class="chip">Runs entirely on your machine</span></div>
-          <div class="actions"><a class="btn primary" href="/swatchbuckler/">About Swatchbuckler</a><a class="btn on-dark" href="/privacy.html#swatchbuckler">What it collects (nothing)</a></div>
-        </div>
-        <img class="shot" src="swatchbuckler/popup-dark.png" alt="The Swatchbuckler popup mid-capture: a swatch strip of the site's colors, three captured pages, and a Haul it in button" width="360" height="487">
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="how">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">How the studio works</span>
-        <h2>Three things every Keelwright tool gets right.</h2>
-      </div>
-      <div class="grid-3">
-        <div class="card"><span class="num">01</span><h3>Local by default</h3><p class="muted">Your files and your browsing stay on your computer. If a tool ever needs to talk to a service, it says so up front and asks first.</p></div>
-        <div class="card"><span class="num">02</span><h3>Open formats out</h3><p class="muted">What you get back is plain files in formats other tools already understand: JSON tokens, CSS, Markdown, HTML. No lock-in, nothing to export later.</p></div>
-        <div class="card"><span class="num">03</span><h3>Built to be read</h3><p class="muted">Every output is meant to be opened and understood by a person or an AI assistant, with the reasoning and the confidence behind each value written down.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="container">
-      <div class="grid-2">
-        <div class="card">
-          <span class="eyebrow">About</span>
-          <h3>A one-person studio on the tip of Cape Cod.</h3>
-          <p class="muted">Keelwright Studio is run by James Cole from Provincetown, Massachusetts. Years of building software for libraries and the web, now pointed at the tools he wanted and couldn't find.</p>
-          <p class="muted">Keelwright is the tools side of the workshop. Client work carries on at <a href="https://greenmountain.design">Green Mountain Design &amp; Development</a>, the same person under an older name.</p>
-        </div>
-        <div class="card">
-          <span class="eyebrow">Contact</span>
-          <h3>Say hello.</h3>
-          <p class="muted">Questions, bug reports, or an idea for the next tool: <a href="mailto:hello@keelwright.dev">hello@keelwright.dev</a>.</p>
-          <p class="muted">Have a project that needs building? <a href="https://greenmountain.design">Green Mountain</a> is where to look at past work and get in touch.</p>
-        </div>
-      </div>
-    </div>
+  <section id="colophon" class="colophon" aria-label="About and contact">
+    <img class="mark" src="assets/mark-large-dark.svg" alt="" width="96" height="96">
+    <p>A one-person studio on the tip of Cape Cod, run by James Cole from Provincetown, Massachusetts. Client work carries on at <a href="https://greenmountain.design">Green Mountain Design &amp; Development</a>, the same person under an older name.</p>
+    <a class="big-link" href="mailto:hello@keelwright.dev">hello@keelwright.dev</a>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <span>© 2026 Keelwright Studio · Provincetown, MA</span>
-    <span><a href="/privacy.html">Privacy</a> · <a href="mailto:hello@keelwright.dev">hello@keelwright.dev</a></span>
-  </div>
+  <span>© 2026 Keelwright Studio · Provincetown, MA</span>
+  <span><a href="/privacy.html">Privacy</a></span>
 </footer>
-<div class="waterline" aria-hidden="true"></div>
+</div>
 </body>
 </html>
