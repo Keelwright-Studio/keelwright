@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Keelwright Studio</title>
+<meta name="description" content="Privacy policy for keelwright.dev and for Swatchbuckler, the Keelwright Studio browser extension. Short version: nothing is collected.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/" aria-label="Keelwright Studio home">
+      <img class="mark mark-light" src="assets/mark.svg" alt="" width="32" height="32">
+      <img class="mark mark-dark" src="assets/mark-dark.svg" alt="" width="32" height="32">
+      Keelwright
+    </a>
+    <nav class="nav" aria-label="Site">
+      <a href="/swatchbuckler/">Swatchbuckler</a>
+      <a href="/privacy.html" aria-current="page">Privacy</a>
+      <a href="mailto:hello@keelwright.dev">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Keelwright Studio</span>
+      <h1>Privacy policy</h1>
+      <p class="lede">The short version: this website and our software collect nothing about you. The long version is below, because the stores and you both deserve the details.</p>
+      <p class="muted">Effective 1 October 2026. Applies to keelwright.dev and to Swatchbuckler. If a future tool behaves differently, it gets its own section here before it ships.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="prose">
+        <h2 id="site">This website</h2>
+        <p>keelwright.dev is a set of static pages. It sets no cookies, loads no analytics, no fonts from third parties (the fonts are served from this site), and no embedded content from other domains. The web host may keep ordinary server logs (IP address, requested page, time) for security and capacity; we don't use them to identify or track anyone.</p>
+        <p>If you email <a href="mailto:hello@keelwright.dev">hello@keelwright.dev</a>, we keep the conversation for as long as it's useful for answering you, and don't share it.</p>
+
+        <h2 id="swatchbuckler">Swatchbuckler</h2>
+        <p>Swatchbuckler is a browser extension that captures the design system of a website you're looking at and exports it as files. Everything it does happens inside your browser.</p>
+        <h3>What it collects</h3>
+        <p>Nothing is sent to us or to anyone else. Swatchbuckler makes no network requests of its own: no accounts, no sign-in, no analytics, no telemetry, no crash reporting, no update checks beyond what your browser's extension store does for every extension.</p>
+        <h3>What it reads, and where it keeps it</h3>
+        <p>When you start a capture session on a site, Swatchbuckler reads the pages you visit on that site: the page's stylesheets and the computed styles, sizes and positions of the elements on it. It records colors, font families and sizes, spacing, border radii, shadows, transitions and the style signatures of recognizable components (buttons, inputs, cards, navigation and the like). It does not record the page's text content, form values, URLs beyond the page path for your own page list, or anything you type.</p>
+        <p>That data is stored in your browser's extension storage (<code>storage.local</code>) on your device, for the current session only. It is removed when you discard the session, and it is never synced or backed up by the extension. Exporting writes a zip file to your Downloads folder through the browser's normal download mechanism; from then on the file is yours.</p>
+        <h3>Permissions, and why each one is there</h3>
+        <table>
+          <thead><tr><th>Permission</th><th>What it is used for</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Permission"><code>activeTab</code>, <code>tabs</code></td><td data-label="Used for">To know which site the current tab is on, so a session can be started for it and the page list can show the pages you've captured.</td></tr>
+            <tr><td data-label="Permission"><code>scripting</code> and access to all sites</td><td data-label="Used for">To run the capture script on the pages you choose to capture. Swatchbuckler can't know in advance which site you'll point it at, so it has to be allowed on any site; it only acts on the one you start a session for, and only while that session is running.</td></tr>
+            <tr><td data-label="Permission"><code>webNavigation</code></td><td data-label="Used for">To notice when a page on the session's site has finished loading, so multi-page sessions capture automatically as you browse. Pages on other sites are ignored.</td></tr>
+            <tr><td data-label="Permission"><code>storage</code></td><td data-label="Used for">To keep the current session and your settings on your device.</td></tr>
+            <tr><td data-label="Permission"><code>downloads</code></td><td data-label="Used for">To save the exported zip to your Downloads folder.</td></tr>
+          </tbody>
+        </table>
+        <h3>Optional features that would change this</h3>
+        <p>A future version may offer an optional step that sends a small summary of a capture (clustered colors, candidate role names, component signatures; never the page itself) to the Claude API using an API key you supply, so that the semantic names and brand description can be written by Claude. That feature will be off by default, will say exactly what it sends before it sends it, and will be described here before it ships. Nothing in the current version does this.</p>
+        <h3>Children</h3>
+        <p>Swatchbuckler is a tool for designers and developers and is not directed at children. Since it collects no personal data, no data about children is collected either.</p>
+
+        <h2 id="changes">Changes and contact</h2>
+        <p>If this policy changes, the effective date at the top changes with it and the previous version stays available on request. Questions go to <a href="mailto:hello@keelwright.dev">hello@keelwright.dev</a>.</p>
+        <p class="muted">Keelwright Studio · Provincetown, Massachusetts, USA</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© 2026 Keelwright Studio · Provincetown, MA</span>
+    <span><a href="/privacy.html">Privacy</a> · <a href="mailto:hello@keelwright.dev">hello@keelwright.dev</a></span>
+  </div>
+</footer>
+<div class="waterline" aria-hidden="true"></div>
+</body>
+</html>

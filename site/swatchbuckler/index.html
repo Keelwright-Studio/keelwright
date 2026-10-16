@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swatchbuckler — Keelwright Studio</title>
+<meta name="description" content="Swatchbuckler is a Firefox, Chrome and Safari extension that captures any site's design system — colors, type, spacing, components — and exports it as tokens, a style guide and a ready-to-use package. Runs entirely on your machine.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/site.css">
+<meta property="og:title" content="Swatchbuckler">
+<meta property="og:description" content="Plunder any site's design system. A browser extension by Keelwright Studio.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://keelwright.dev/swatchbuckler/">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/" aria-label="Keelwright Studio home">
+      <img class="mark mark-light" src="../assets/mark.svg" alt="" width="32" height="32">
+      <img class="mark mark-dark" src="../assets/mark-dark.svg" alt="" width="32" height="32">
+      Keelwright
+    </a>
+    <nav class="nav" aria-label="Site">
+      <a href="/swatchbuckler/" aria-current="page">Swatchbuckler</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="mailto:hello@keelwright.dev">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <img src="icon-128.png" alt="" width="96" height="96" style="border-radius: 22px;">
+      <span class="eyebrow">A browser extension by Keelwright Studio</span>
+      <h1>Swatchbuckler</h1>
+      <p class="lede">Plunder any site's design system. Browse a site, and Swatchbuckler captures its colors, type, spacing, radii, shadows and components, then hauls it all in as design tokens, a style guide, and a package ready for Claude or your own code.</p>
+      <div class="chips"><span class="chip">Firefox</span><span class="chip">Chrome</span><span class="chip">Safari for Mac</span><span class="chip soft">In development · store listings coming</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div class="prose">
+          <h2>How it works</h2>
+          <p><strong>1. Start plundering.</strong> Open the site, click the Swatchbuckler icon and start a session. The page you're on is captured right away.</p>
+          <p><strong>2. Browse.</strong> Every page you visit on that site while the session runs is captured and merged: colors weighted by how much of the screen they cover, fonts and sizes by where they're used, components recognized by role and shape. Pause any time.</p>
+          <p><strong>3. Haul it in.</strong> One click builds the whole package in the background and downloads a zip. Nothing is uploaded anywhere; the build runs inside the extension.</p>
+          <h2>What you get</h2>
+          <p>The haul has the same shape for every site, so what you learn from one you can reuse on the next:</p>
+<pre><code>Site/                       style guide: index.html, tokens.css, typography.css,
+                            components.css, animations.css, prompt.md, components/
+site/artifact/              a starter template for Claude Artifacts
+site/code/                  DESIGN.md, tailwind.theme.js, tokens.css, palette.md
+site/design-system/project/ content for a Claude Design System artifact
+tokens/site/                W3C design tokens: primitives, semantic light/dark,
+                            components, charts, motion, brand
+report.md                   what was observed, what was derived, and how confident
+capture.json                the raw per-page capture (optional)</code></pre>
+          <p>Every token carries a confidence score, and anything Swatchbuckler had to infer rather than observe is flagged as derived, so you always know which values to trust and which to check.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <img src="popup-light.png" alt="Swatchbuckler popup in light mode, capturing acorn.firefox.com: a swatch strip, a page list and the Haul it in button" width="360" height="487" style="border-radius: 12px; box-shadow: var(--shadow); align-self: center; width: min(100%, 340px);">
+          <div class="card">
+            <h3>Privacy, in one paragraph</h3>
+            <p class="muted">Swatchbuckler reads the pages you choose to capture and keeps what it finds in your browser's extension storage until you export it. It makes no network requests, has no accounts, no analytics and no telemetry. <a href="/privacy.html#swatchbuckler">The full policy</a> lists every permission it asks for and why.</p>
+          </div>
+          <div class="card">
+            <h3>Made for Claude, useful everywhere</h3>
+            <p class="muted">The package is laid out to drop straight into a Claude Design System artifact, an Artifact template, or a <code>DESIGN.md</code> for Claude Code. It's also just CSS, JSON and Markdown, so any tool that reads design tokens can use it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="get">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Get it</span>
+        <h2>Coming to the stores.</h2>
+        <p class="muted" style="max-width: 60ch;">Swatchbuckler is in development. When it ships, it will be listed on Firefox Add-ons, the Chrome Web Store and the Mac App Store under Keelwright Studio. Until then, the source builds for all three browsers; write to <a href="mailto:hello@keelwright.dev">hello@keelwright.dev</a> if you'd like to try it early.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© 2026 Keelwright Studio · Provincetown, MA</span>
+    <span><a href="/privacy.html">Privacy</a> · <a href="mailto:hello@keelwright.dev">hello@keelwright.dev</a></span>
+  </div>
+</footer>
+<div class="waterline" aria-hidden="true"></div>
+</body>
+</html>
